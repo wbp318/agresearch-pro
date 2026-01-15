@@ -63,7 +63,7 @@ Thumbs.db
 tmp/
 temp/
 *.tmp
-tmpclaude-*/
+tmpclaude-*
 
 # Claude Code
 .claude/
