@@ -63,6 +63,10 @@ Thumbs.db
 tmp/
 temp/
 *.tmp
+tmpclaude-*/
+
+# Claude Code
+.claude/
 
 # Static files (generated)
 app/static/dist/
