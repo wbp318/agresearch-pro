@@ -44,6 +44,10 @@ Major integration with AgTools backend services, bringing research-grade field t
 - Updated README.md with new API endpoint tables
 - Updated project structure to reflect new services
 
+### Fixed
+- Added `_init_fields_table()` to create the fields table dependency required by AgTools research_service
+- Fixed Python path resolution in agtools_integration.py (use `.resolve()` for correct parent traversal)
+
 ---
 
 ## [0.1.0] - 2026-01-15
