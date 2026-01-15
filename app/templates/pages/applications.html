@@ -1,0 +1,116 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="flex justify-between items-center mb-6">
+    <div>
+        <p class="text-gray-500">Track and manage your grant applications</p>
+    </div>
+    <button class="px-4 py-2 bg-ag-green-600 text-white rounded-lg hover:bg-ag-green-700 transition-colors flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+        New Application
+    </button>
+</div>
+
+<!-- Status Tabs -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-100 mb-6">
+    <div class="border-b border-gray-100">
+        <nav class="flex space-x-8 px-6" aria-label="Tabs">
+            <a href="#" class="border-b-2 border-ag-green-500 py-4 px-1 text-sm font-medium text-ag-green-600">
+                All (8)
+            </a>
+            <a href="#" class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                Draft (2)
+            </a>
+            <a href="#" class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                In Progress (3)
+            </a>
+            <a href="#" class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                Submitted (2)
+            </a>
+            <a href="#" class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                Approved (1)
+            </a>
+        </nav>
+    </div>
+
+    <!-- Applications List -->
+    <div class="divide-y divide-gray-100">
+        <div class="p-4 hover:bg-gray-50 transition-colors">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 bg-ag-green-100 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-ag-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-800">SARE Farmer Rancher Grant 2026</p>
+                        <p class="text-sm text-gray-500">Requested: $25,000 | Started: Jan 5, 2026</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm font-medium rounded-full">In Progress</span>
+                    <span class="text-sm text-gray-500">75% complete</span>
+                    <button class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 hover:bg-gray-50 transition-colors">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-800">NRCS EQIP Conservation</p>
+                        <p class="text-sm text-gray-500">Requested: $75,000 | Started: Dec 15, 2025</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">Submitted</span>
+                    <span class="text-sm text-gray-500">Awaiting review</span>
+                    <button class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 hover:bg-gray-50 transition-colors">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 bg-ag-green-100 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-ag-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-800">Beginning Farmer Grant 2025</p>
+                        <p class="text-sm text-gray-500">Awarded: $50,000 | Project: Jan 2025 - Dec 2026</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="px-3 py-1 bg-ag-green-100 text-ag-green-700 text-sm font-medium rounded-full">Approved</span>
+                    <span class="text-sm text-gray-500">Active project</span>
+                    <button class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

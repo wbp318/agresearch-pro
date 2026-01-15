@@ -1,0 +1,141 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<!-- Search Header -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+    <div class="flex flex-col md:flex-row md:items-center gap-4">
+        <div class="flex-1">
+            <div class="relative">
+                <input
+                    type="text"
+                    placeholder="Search grants by keyword, program, or agency..."
+                    class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-ag-green-500 focus:border-ag-green-500"
+                >
+                <svg class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+        </div>
+        <div class="flex gap-2">
+            <select class="px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-ag-green-500">
+                <option value="">All Sources</option>
+                <option value="federal">Federal</option>
+                <option value="state">State</option>
+                <option value="private">Private/Foundation</option>
+            </select>
+            <select class="px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-ag-green-500">
+                <option value="">All Categories</option>
+                <option value="conservation">Conservation</option>
+                <option value="research">Research</option>
+                <option value="equipment">Equipment</option>
+                <option value="beginning">Beginning Farmer</option>
+            </select>
+            <button class="px-6 py-3 bg-ag-green-600 text-white rounded-lg hover:bg-ag-green-700 transition-colors">
+                Search
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Results Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Grant Card 1 -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="p-6">
+            <div class="flex items-start justify-between mb-4">
+                <span class="px-2 py-1 bg-ag-green-100 text-ag-green-700 text-xs font-medium rounded">Federal</span>
+                <button class="text-gray-400 hover:text-yellow-500">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                    </svg>
+                </button>
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">SARE Farmer Rancher Grant</h3>
+            <p class="text-sm text-gray-500 mb-4">Supports farmers conducting on-farm research and demonstration projects in sustainable agriculture.</p>
+            <div class="space-y-2 text-sm">
+                <div class="flex justify-between">
+                    <span class="text-gray-500">Award Range:</span>
+                    <span class="font-medium">$10,000 - $30,000</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-500">Deadline:</span>
+                    <span class="font-medium text-red-600">Jan 20, 2026</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-500">Agency:</span>
+                    <span class="font-medium">USDA NIFA</span>
+                </div>
+            </div>
+            <button class="w-full mt-4 px-4 py-2 bg-ag-green-600 text-white rounded-lg hover:bg-ag-green-700 transition-colors">
+                View Details
+            </button>
+        </div>
+    </div>
+
+    <!-- Grant Card 2 -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="p-6">
+            <div class="flex items-start justify-between mb-4">
+                <span class="px-2 py-1 bg-ag-green-100 text-ag-green-700 text-xs font-medium rounded">Federal</span>
+                <button class="text-gray-400 hover:text-yellow-500">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                    </svg>
+                </button>
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">NRCS EQIP</h3>
+            <p class="text-sm text-gray-500 mb-4">Environmental Quality Incentives Program provides financial and technical assistance for conservation practices.</p>
+            <div class="space-y-2 text-sm">
+                <div class="flex justify-between">
+                    <span class="text-gray-500">Award Range:</span>
+                    <span class="font-medium">Up to $450,000</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-500">Deadline:</span>
+                    <span class="font-medium text-yellow-600">Rolling</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-500">Agency:</span>
+                    <span class="font-medium">USDA NRCS</span>
+                </div>
+            </div>
+            <button class="w-full mt-4 px-4 py-2 bg-ag-green-600 text-white rounded-lg hover:bg-ag-green-700 transition-colors">
+                View Details
+            </button>
+        </div>
+    </div>
+
+    <!-- Grant Card 3 -->
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+        <div class="p-6">
+            <div class="flex items-start justify-between mb-4">
+                <span class="px-2 py-1 bg-ag-green-100 text-ag-green-700 text-xs font-medium rounded">Federal</span>
+                <button class="text-gray-400 hover:text-yellow-500">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                    </svg>
+                </button>
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">Beginning Farmer Development</h3>
+            <p class="text-sm text-gray-500 mb-4">NIFA program supporting education and training for beginning farmers and ranchers.</p>
+            <div class="space-y-2 text-sm">
+                <div class="flex justify-between">
+                    <span class="text-gray-500">Award Range:</span>
+                    <span class="font-medium">$250,000 - $750,000</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-500">Deadline:</span>
+                    <span class="font-medium">Feb 5, 2026</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-500">Agency:</span>
+                    <span class="font-medium">USDA NIFA</span>
+                </div>
+            </div>
+            <button class="w-full mt-4 px-4 py-2 bg-ag-green-600 text-white rounded-lg hover:bg-ag-green-700 transition-colors">
+                View Details
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
