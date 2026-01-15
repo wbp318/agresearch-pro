@@ -1,0 +1,76 @@
+# AgResearch Pro - Git Attributes
+# Ensure GitHub correctly detects all languages
+
+# Python
+*.py linguist-detectable=true
+*.pyi linguist-detectable=true
+
+# JavaScript
+*.js linguist-detectable=true
+*.mjs linguist-detectable=true
+
+# TypeScript
+*.ts linguist-detectable=true
+*.tsx linguist-detectable=true
+
+# HTML Templates
+*.html linguist-detectable=true
+*.jinja linguist-detectable=true
+*.jinja2 linguist-detectable=true
+
+# CSS/Styling
+*.css linguist-detectable=true
+*.scss linguist-detectable=true
+*.sass linguist-detectable=true
+
+# SQL
+*.sql linguist-detectable=true
+
+# Shell scripts
+*.sh linguist-detectable=true
+*.bash linguist-detectable=true
+
+# Configuration
+*.json linguist-detectable=true
+*.yaml linguist-detectable=true
+*.yml linguist-detectable=true
+*.toml linguist-detectable=true
+*.ini linguist-detectable=true
+
+# Markdown
+*.md linguist-detectable=true
+
+# Exclude vendor/generated files from language stats
+static/vendor/* linguist-vendored=true
+node_modules/* linguist-vendored=true
+*.min.js linguist-vendored=true
+*.min.css linguist-vendored=true
+
+# Line ending normalization
+* text=auto
+
+# Explicitly declare text files
+*.py text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.sql text eol=lf
+*.sh text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.db binary

@@ -145,6 +145,12 @@ app.include_router(applications.router, prefix="/api/v1/applications", tags=["Ap
 app.include_router(research.router, prefix="/api/v1/research", tags=["Research"])
 app.include_router(loans.router, prefix="/api/v1/loans", tags=["Loans"])
 
+# AgTools Integration - Powered by AgTools backend services
+from app.api import trials, nrcs
+
+app.include_router(trials.router, prefix="/api/v1/trials", tags=["Field Trials (AgTools)"])
+app.include_router(nrcs.router, prefix="/api/v1/nrcs", tags=["NRCS & Grants (AgTools)"])
+
 
 # ============================================================================
 # STARTUP / SHUTDOWN
